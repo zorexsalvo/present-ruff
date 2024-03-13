@@ -7,11 +7,11 @@ Improving DX using Ruff and Pre-Commit!
 ========================================
 
 Overview
-========
+=========
 
 What is Ruff?
-----------------
-Ruff is an extremely fast `Python` Linter and Formatter
+-------------
+Ruff is an extremely fast ``Python`` Linter and Formatter
 
 Features
 --------
@@ -37,3 +37,6 @@ Features
 .. include:: _section/current.rst
 .. include:: _section/getting_started.rst
 .. include:: _section/ruff_config.rst
+.. include:: _section/pre_commit.rst
+.. include:: _section/pre_commit_installation.rst
+.. include:: _section/pre_commit_configuration.rst

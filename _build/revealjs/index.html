@@ -26,7 +26,7 @@
 </section>
 <section >
 <h3>What is Ruff?</h3>
-<p>Ruff is an extremely fast <cite>Python</cite> Linter and Formatter</p>
+<p>Ruff is an extremely fast <code class="docutils literal notranslate"><span class="pre">Python</span></code> Linter and Formatter</p>
 </section>
 <section >
 <h3>Features</h3>
@@ -148,6 +148,73 @@ exclude = [&quot;migrations/*&quot;]
 [tool.ruff.lint]
 select = [&quot;I&quot;]
 ignore = [&quot;E501&quot;]</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Pre-Commit</h2>
+</section>
+<section >
+<h3>Overview</h3>
+<p>a framework for managing git pre-commit hooks</p>
+</section>
+<section >
+<h3>Use cases off type of my head</h3>
+<ul class="simple">
+<li><p>perform a lint check on files that are about to be committed</p></li>
+<li><p>check commit message format, standardization</p></li>
+<li><p>format code pre-commit</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>Installation</h2>
+</section>
+<section >
+<h3>Using pip:</h3>
+<pre data-id="using-pip"><code data-trim data-noescape class="default">pip install pre-commit</code></pre>
+</section>
+<section >
+<h3>Quick Start</h3>
+<p>check version to verify pre-commit installation:</p>
+<pre data-id="quick-start"><code data-trim data-noescape class="default">pre-commit --version</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Configuration</h2>
+</section>
+<section >
+<h3>Pre-commit configuration</h3>
+<ul class="simple">
+<li><p>create a file named <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code></p></li>
+<li><p>generate a basic config using <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">sample-config</span></code></p></li>
+</ul>
+</section>
+<section >
+<h3>Our configuration</h3>
+<pre data-id="our-configuration"><code data-trim data-noescape class="default">repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-yaml
+  - id: check-added-large-files
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.3.2
+  hooks:
+  - id: ruff</code></pre>
+</section>
+<section >
+<h3>Install the pre-commit hooks</h3>
+<pre data-id="install-the-pre-commit-hooks"><code data-trim data-noescape class="default">pre-commit install</code></pre>
+</section>
+<section >
+<h3>Viola!</h3>
+<p>Pre-commit will run wen you commit code. If any of the hooks fail, the commit will be aborted.</p>
 </section>
 </section>
 </section>
