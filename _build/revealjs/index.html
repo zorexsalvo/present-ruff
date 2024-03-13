@@ -85,11 +85,7 @@
 </section>
 <section >
 <h3>What are we currently using?</h3>
-<p>We use <cite>flake8</cite> as it may seem.</p>
-</section>
-<section >
-<h3>Comparison</h3>
-<p>&lt;img alt=”Shows a bar chart with benchmark results.” src=”<a class="reference external" href="https://user-images.githubusercontent.com/1309177/232603514-c95e9b0f-6b31-43de-9a80-9e844173fd6a.svg#only-dark">https://user-images.githubusercontent.com/1309177/232603514-c95e9b0f-6b31-43de-9a80-9e844173fd6a.svg#only-dark</a>”&gt;</p>
+<p>We use <cite>flake8</cite>.</p>
 </section>
 </section>
 <section >
@@ -98,24 +94,60 @@
 </section>
 <section >
 <h3>Installation</h3>
-<blockquote>
-<div><p>pip install ruff</p>
-</div></blockquote>
+<pre data-id="installation"><code data-trim data-noescape class="default">pip install ruff</code></pre>
 </section>
 <section >
 <h3>Run it!</h3>
-<dl class="simple">
-<dt>Go to the project directory and run the following command:</dt><dd><p>ruff .</p>
-</dd>
-</dl>
+<p>Go to the project directory and run the following command:</p>
+<pre data-id="run-it"><code data-trim data-noescape class="default">ruff .</code></pre>
 </section>
 <section >
 <h3>Check Rules</h3>
 <p>Each of the violations will be listed once we run the ruff check command.
-And each of the violations will have a code associated with it.</p>
+And each of the violations will have a code associated with it.:</p>
+<pre data-id="check-rules"><code data-trim data-noescape class="default">ruff rule {CODE}</code></pre>
+</section>
+<section >
+<h3>Show source</h3>
+<p>In ruff, we can also show the soure of the offending code.:</p>
+<pre data-id="show-source"><code data-trim data-noescape class="default">ruff --show-source</code></pre>
+</section>
+<section >
+<h3>Show Sublinters that Ruff Implements</h3>
+<pre data-id="show-sublinters-that-ruff-implements"><code data-trim data-noescape class="default">ruff linter
+ruff --select {CODE}</code></pre>
+</section>
+<section >
+<h3>Format and check a file</h3>
+<pre data-id="format-and-check-a-file"><code data-trim data-noescape class="default">ruff check {file_path}
+ruff format {file_path}
+
+--fix # Lint all files in the current directory, and fix any fixable errors.
+--watch # Lint all files in the current directory, and re-lint on change</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Configuration</h2>
+</section>
+<section >
+<h3>Run Statistics</h3>
 <blockquote>
-<div><p>ruff rule {CODE}</p>
+<div><p>ruff –statistics</p>
 </div></blockquote>
+</section>
+<section >
+<h3>Configuration</h3>
+<p>Ruff can be configured via pyproject.toml or if none
+it’ll look for ruff.toml:</p>
+<pre data-id="id3"><code data-trim data-noescape class="default">$ pyproject.toml
+
+[tool.ruff]
+exclude = [&quot;migrations/*&quot;]
+
+[tool.ruff.lint]
+select = [&quot;I&quot;]
+ignore = [&quot;E501&quot;]</code></pre>
 </section>
 </section>
 </section>

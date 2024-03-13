@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Why Ruff?</title>
+  <title>Configuration</title>
     <link rel="stylesheet" type="text/css" href="../_static/revealjs/dist/reveal.css?v=89001d23" />
     <link rel="stylesheet" href="../_static/revealjs/dist/theme/black.css" type="text/css" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,23 +17,27 @@
         <div class="slides" role="main">
             <section >
 <section >
-<h1>Why Ruff?</h1>
+<h1>Configuration</h1>
 </section>
 </section>
 <section >
-<h2>Who use Ruff?</h2>
-<p>Ruff is extremely actively developed and used in major open-source projects like:</p>
-<ul class="simple">
-<li><p>Apache Airflow</p></li>
-<li><p>FastAPI</p></li>
-<li><p>Hugging Face</p></li>
-<li><p>Pandas</p></li>
-<li><p>SciPy</p></li>
-</ul>
+<h2>Run Statistics</h2>
+<blockquote>
+<div><p>ruff –statistics</p>
+</div></blockquote>
 </section>
 <section >
-<h2>What are we currently using?</h2>
-<p>We use <cite>flake8</cite>.</p>
+<h2>Configuration</h2>
+<p>Ruff can be configured via pyproject.toml or if none
+it’ll look for ruff.toml:</p>
+<pre data-id="id1"><code data-trim data-noescape class="default">$ pyproject.toml
+
+[tool.ruff]
+exclude = [&quot;migrations/*&quot;]
+
+[tool.ruff.lint]
+select = [&quot;I&quot;]
+ignore = [&quot;E501&quot;]</code></pre>
 </section>
 </section>
 

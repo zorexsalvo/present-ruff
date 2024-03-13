@@ -22,24 +22,36 @@
 </section>
 <section >
 <h2>Installation</h2>
-<blockquote>
-<div><p>pip install ruff</p>
-</div></blockquote>
+<pre data-id="installation"><code data-trim data-noescape class="default">pip install ruff</code></pre>
 </section>
 <section >
 <h2>Run it!</h2>
-<dl class="simple">
-<dt>Go to the project directory and run the following command:</dt><dd><p>ruff .</p>
-</dd>
-</dl>
+<p>Go to the project directory and run the following command:</p>
+<pre data-id="run-it"><code data-trim data-noescape class="default">ruff .</code></pre>
 </section>
 <section >
 <h2>Check Rules</h2>
 <p>Each of the violations will be listed once we run the ruff check command.
-And each of the violations will have a code associated with it.</p>
-<blockquote>
-<div><p>ruff rule {CODE}</p>
-</div></blockquote>
+And each of the violations will have a code associated with it.:</p>
+<pre data-id="check-rules"><code data-trim data-noescape class="default">ruff rule {CODE}</code></pre>
+</section>
+<section >
+<h2>Show source</h2>
+<p>In ruff, we can also show the soure of the offending code.:</p>
+<pre data-id="show-source"><code data-trim data-noescape class="default">ruff --show-source</code></pre>
+</section>
+<section >
+<h2>Show Sublinters that Ruff Implements</h2>
+<pre data-id="show-sublinters-that-ruff-implements"><code data-trim data-noescape class="default">ruff linter
+ruff --select {CODE}</code></pre>
+</section>
+<section >
+<h2>Format and check a file</h2>
+<pre data-id="format-and-check-a-file"><code data-trim data-noescape class="default">ruff check {file_path}
+ruff format {file_path}
+
+--fix # Lint all files in the current directory, and fix any fixable errors.
+--watch # Lint all files in the current directory, and re-lint on change</code></pre>
 </section>
 </section>
 

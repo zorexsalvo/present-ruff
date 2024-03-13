@@ -36,3 +36,4 @@ Features
 .. include:: _section/history.rst
 .. include:: _section/current.rst
 .. include:: _section/getting_started.rst
+.. include:: _section/ruff_config.rst
