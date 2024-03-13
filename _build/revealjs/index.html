@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving DX using Ruff and Pre-Commit!</title>
+    <link rel="stylesheet" type="text/css" href="_static/revealjs/dist/reveal.css?v=89001d23" />
+    <link rel="stylesheet" href="_static/revealjs/dist/theme/black.css" type="text/css" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section >
+<h1>Improving DX using Ruff and Pre-Commit!</h1>
+</section>
+</section>
+<section >
+<section >
+<h2>Overview</h2>
+</section>
+<section >
+<h3>What is Ruff?</h3>
+<p>Ruff is an extremely fast <cite>Python</cite> Linter and Formatter</p>
+</section>
+<section >
+<h3>Features</h3>
+<ul class="simple">
+<li><p>🚀 10-100x faster than existing linters (like Flake8) and formatters (like Black)</p></li>
+<li><p>🐍 Installable via pip</p></li>
+<li><p>pyproject.toml support</p></li>
+</ul>
+</section>
+<section >
+<h3>Features</h3>
+<ul class="simple">
+<li><p>Python 3.12 compatibility</p></li>
+<li><p>Drop-in parity with Flake8, isort, and Black</p></li>
+<li><p>📦 Built-in caching, to avoid re-analyzing unchanged files</p></li>
+<li><p>🔧 Fix support, for automatic error correction (e.g., automatically remove unused imports)</p></li>
+</ul>
+</section>
+<section >
+<h3>Features</h3>
+<ul class="simple">
+<li><p>Over 700 built-in rules, with native re-implementations of popular Flake8 plugins, like flake8-bugbear</p></li>
+<li><p>⌨️ First-party editor integrations for VS Code and more</p></li>
+<li><p>🌎 Monorepo-friendly, with hierarchical and cascading configuration</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>How did it start?</h2>
+<p>It is a tool developed by <cite>Charlie Marsh</cite></p>
+</section>
+<section >
+<h3>Why Rust?</h3>
+<ul class="simple">
+<li><p>Rust is compiled / low-level programming</p></li>
+<li><p>Rust and Python has excellent interoperability
+* you can compile Rust code and publish it to pypi using <cite>maturin</cite> / <cite>pyo3</cite></p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>Why Ruff?</h2>
+</section>
+<section >
+<h3>Who use Ruff?</h3>
+<p>Ruff is extremely actively developed and used in major open-source projects like:</p>
+<ul class="simple">
+<li><p>Apache Airflow</p></li>
+<li><p>FastAPI</p></li>
+<li><p>Hugging Face</p></li>
+<li><p>Pandas</p></li>
+<li><p>SciPy</p></li>
+</ul>
+</section>
+<section >
+<h3>What are we currently using?</h3>
+<p>We use <cite>flake8</cite> as it may seem.</p>
+</section>
+<section >
+<h3>Comparison</h3>
+<p>&lt;img alt=”Shows a bar chart with benchmark results.” src=”<a class="reference external" href="https://user-images.githubusercontent.com/1309177/232603514-c95e9b0f-6b31-43de-9a80-9e844173fd6a.svg#only-dark">https://user-images.githubusercontent.com/1309177/232603514-c95e9b0f-6b31-43de-9a80-9e844173fd6a.svg#only-dark</a>”&gt;</p>
+</section>
+</section>
+<section >
+<section >
+<h2>Getting Started</h2>
+</section>
+<section >
+<h3>Installation</h3>
+<blockquote>
+<div><p>pip install ruff</p>
+</div></blockquote>
+</section>
+<section >
+<h3>Run it!</h3>
+<dl class="simple">
+<dt>Go to the project directory and run the following command:</dt><dd><p>ruff .</p>
+</dd>
+</dl>
+</section>
+<section >
+<h3>Check Rules</h3>
+<p>Each of the violations will be listed once we run the ruff check command.
+And each of the violations will have a code associated with it.</p>
+<blockquote>
+<div><p>ruff rule {CODE}</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="_static/revealjs/dist/reveal.js"></script>
+    
+    
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>
