@@ -21,14 +21,14 @@ Features
 
 Features
 --------
-* Python 3.12 compatibility
+* Python 3.14 compatibility
 * Drop-in parity with Flake8, isort, and Black
 * 📦 Built-in caching, to avoid re-analyzing unchanged files
 * 🔧 Fix support, for automatic error correction (e.g., automatically remove unused imports)
 
 Features
 ---------
-* Over 700 built-in rules, with native re-implementations of popular Flake8 plugins, like flake8-bugbear
+* Over 800 built-in rules, with native re-implementations of popular Flake8 plugins, like flake8-bugbear
 * ⌨️ First-party editor integrations for VS Code and more
 * 🌎 Monorepo-friendly, with hierarchical and cascading configuration
 

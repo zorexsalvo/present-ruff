@@ -23,9 +23,9 @@ Our configuration
       - id: check-added-large-files
  
     - repo: https://github.com/astral-sh/ruff-pre-commit
-      rev: v0.3.2
+      rev: v0.14.3
       hooks:
-      - id: ruff
+      - id: ruff-check
 
 
 Install the pre-commit hooks
