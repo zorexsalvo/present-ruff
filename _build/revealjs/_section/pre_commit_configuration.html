@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Configuration</title>
+    <link rel="stylesheet" type="text/css" href="../_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="../_static/revealjs/dist/theme/black.css" type="text/css" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section >
+<h1>Configuration</h1>
+</section>
+</section>
+<section >
+<section >
+<h2>Pre-commit configuration</h2>
+<ul class="simple">
+<li><p>create a file named <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code></p></li>
+<li><p>generate a basic config using <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">sample-config</span></code></p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>Our configuration</h2>
+<pre data-id="our-configuration"><code data-trim data-noescape class="default">repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-yaml
+  - id: check-added-large-files
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.14.3
+  hooks:
+  - id: ruff-check</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Install the pre-commit hooks</h2>
+<pre data-id="install-the-pre-commit-hooks"><code data-trim data-noescape class="default">pre-commit install</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Viola!</h2>
+<p>Pre-commit will run wen you commit code. If any of the hooks fail, the commit will be aborted.</p>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="../_static/revealjs/dist/reveal.js"></script>
+    
+    
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, {"scrollActivationWidth": null});
+        
+        
+        
+          revealjsConfig.plugins = [
+            
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>
